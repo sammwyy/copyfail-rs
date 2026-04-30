@@ -1,6 +1,6 @@
 # copyfail-rs
 
-A Rust implementation of the **Copy Fail** exploit (CVE-2026-31431), a critical vulnerability chaining `AF_ALG` and `splice()` to achieve a 4-byte page cache write, leading to local privilege escalation on major Linux distributions.
+**Copy Fail** exploit (CVE-2026-31431) but in Rust, a critical vulnerability chaining `AF_ALG` and `splice()` to achieve a 4-byte page cache write, leading to local privilege escalation on major Linux distributions.
 
 Based on the research and PoC by [Xint Code](https://xint.io/blog/copy-fail-linux-distributions).
 

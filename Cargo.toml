@@ -4,5 +4,11 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-hex = "0.4.3"
 libc = "0.2.186"
+
+[profile.release]
+opt-level = "z"     # Optimize for size
+lto = true          # Enable Link Time Optimization
+codegen-units = 1   # Reduce parallel code generation for better optimization
+panic = "abort"     # Remove stack unwinding code
+strip = true        # Automatically strip symbols from the binary
