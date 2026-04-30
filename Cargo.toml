@@ -1,0 +1,8 @@
+[package]
+name = "copyfail-rs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+hex = "0.4.3"
+libc = "0.2.186"
